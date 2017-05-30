@@ -1,0 +1,25 @@
+
+
+.jumbotron{
+
+	background: url("../images/Blue-Crystal-Meth-Wallpaper.jpg");
+}
+
+
+.col-md-4{
+	
+	
+}
+
+img{
+	height: 100px;
+	width: 100px;
+
+}
+
+.panel{
+	float: left;	
+	margin-left: 20px;
+	max-width: 550px;
+	text-align: : center;
+}
