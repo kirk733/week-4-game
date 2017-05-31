@@ -6,20 +6,20 @@ $(document).ready(function() {
 	var wins = 0;
 	var losses = 0;
 	var totalScore = 0;
+
+	//variable declaration and initialize values
 	var randomNumber = Math.floor(Math.random() * 101) + 19;
 	var blue = Math.floor(Math.random() * 12) + 1;
 	var red = Math.floor(Math.random() * 11) + 2;
 	var diamond = Math.floor(Math.random() * 10) + 3;
 	var green = Math.floor(Math.random() * 9) + 4;
 
-	console.log(blue, red, diamond, green);
-
-
+	//write initial values to page
 	$("#wins").html("" + wins);
 	$("#losses").html("" + losses);
 	$("#randomNumber").html("" + randomNumber);
-	console.log(randomNumber);
 
+	//button on clicks
 	$("#button1").on("click", function() {
   		totalScore = totalScore + blue;
  		 $("#totalScore").html("" + totalScore);
@@ -44,6 +44,7 @@ $(document).ready(function() {
  		 winLoss ();
 	});
 
+	//check for win or loss and reset variables if true
 	function winLoss(){
 		if (randomNumber === totalScore) {
     	wins++
@@ -58,7 +59,9 @@ $(document).ready(function() {
     	resetVariables ();
   		};
   	};
-  		
+
+
+  	//resetVariables and write to page	
   	function resetVariables(){
   		randomNumber = Math.floor(Math.random() * 101) + 19;
 		blue = Math.floor(Math.random() * 12) + 1;
@@ -66,6 +69,9 @@ $(document).ready(function() {
 		diamond = Math.floor(Math.random() * 10) + 3;
 		green = Math.floor(Math.random() * 9) + 4;
 		totalScore = 0;
+		$("#totalScore").html("" + totalScore);
+		$("#randomNumber").html("" + randomNumber);
+
   		};
 
 
